@@ -93,3 +93,15 @@ public class Graph {
         System.out.print(g);
     }
 }
+
+/*
+    树的前序遍历：
+
+    preorder(TreeNode node) {
+        if(node != null){
+            list.add(node.val);
+            preorder(node.left);
+            preorder(node.right);
+        }
+    }
+*/
