@@ -99,9 +99,24 @@ public class Graph {
 
     preorder(TreeNode node) {
         if(node != null){
-            list.add(node.val);
+            list.add(node.val); // 这一行是遍历元素， 下两行是访问所有子树
             preorder(node.left);
             preorder(node.right);
         }
     }
+*/
+
+
+/*
+
+    dfs(int v) {
+        visited[v] = true;  // 一进来就代表已经遍历当前顶点了
+        list.add(v);
+        for(int w: adj(v)){ // 取出和顶点 V 相邻的所有顶点
+            if(!visited[w])     // 对顶点进行一次是否已经遍历的判断
+                dfs(w);
+        }
+    }
+
+
 */
