@@ -4,7 +4,6 @@ public class GraphDFS {
 
     private Graph G;
     private boolean[] visited;
-
     private ArrayList<Integer> order = new ArrayList<>();
 
     public GraphDFS(Graph G){
@@ -15,7 +14,6 @@ public class GraphDFS {
     }
 
     private void dfs(int v){
-
         visited[v] = true;
         order.add(v);
         for(int w: G.adj(v))
@@ -27,10 +25,11 @@ public class GraphDFS {
         return order;
     }
 
-    public static void main(String[] args){
-
-        Graph g = new Graph("g.txt");
+    public static void main(String[] args) {
+        
+        Graph g = new Graph("../g.txt");
         GraphDFS graphDFS = new GraphDFS(g);
         System.out.println(graphDFS.order());
     }
+
 }
