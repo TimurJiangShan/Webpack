@@ -4,7 +4,7 @@ import java.util.TreeSet;
 import java.util.Scanner;
 
 
-/// 暂时只支持无向无权图
+/// 只支持无向无权图
 public class Graph {
 
     private int V;
@@ -89,7 +89,7 @@ public class Graph {
 
     public static void main(String[] args){
 
-        Graph g = new Graph("g.txt");
+        Graph g = new Graph("../g.txt");
         System.out.print(g);
     }
 }
