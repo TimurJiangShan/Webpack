@@ -11,10 +11,11 @@ public class GraphDFS {
     public GraphDFS(Graph G){
 
         this.G = G;
-        visited = new boolean[G.V()];
-        for(int v = 0; v < G.V(); v ++)
-            if(!visited[v])
-                dfs(v);
+        visited = new boolean[G.V()];       
+        for(int i = 0; i < G.V(); i++){
+            if(!visited[i])
+                dfs(i);
+        }
     }
 
     private void dfs(int v){
