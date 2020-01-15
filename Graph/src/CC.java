@@ -51,9 +51,8 @@ public class CC {
     public static void main(String[] args){
 
         Graph g = new Graph("../g.txt");
-        GraphDFS graphDFS = new GraphDFS(g);
+        // GraphDFS graphDFS = new GraphDFS(g);
         CC cc = new CC(g);
         System.out.println(cc.count());
-
     }
 }
