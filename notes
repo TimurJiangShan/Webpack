@@ -10,3 +10,23 @@ Webpack 的安装
 
   命令的一些简写:npm init -y;可以不用一路回车，直接生成默认的；
   npm install webpack webpack-cli -D,替代npm install webpack webpack-cli --save-dev
+
+------------------------------------------------------------------------------------------
+
+webpack在打包的时候，他并不知道自己如何打包，需要配置文件来辅助他。但是一开始我们并没有写这个配置文件，是因为即使我们不写这个配置文件，webpack默认也会有一套自己的默认配置。
+想自己配置打包的文件，就要自己创建webpack.config.js的文件
+
+const path = require('path');
+
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+  }
+}
+
+entry是项目打包的入口文件。
+打包出来的，要运行的文件放在output的配置项里面进行配置。 path是使用绝对路径。如果不写path这一项，项目默认也会生成dist
+
+在package.json的scripts的标签里面的命令，会先去本地工程的node_modules里面找，变相npx了
