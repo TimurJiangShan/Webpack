@@ -6,3 +6,7 @@ Webpack 的安装
   4）全局安装的方式：npm install webpack webpack-cli -g。查看是否安装成功，webpack -v;全局安装有个缺陷，如果电脑上有2个项目，使用的是不同版本的webpack进行打包的，全局安装就不能同时满足2个项目的需求。
   5）局部安装：局部安装需要先进入项目，使用npm install webpack webpack-cli --save-dev ;这样可以避免全局安装的缺陷，此时查看是否安装成功，不能使用webpack -v ;而要使用npx webpack -v 
   6）局部安装的另外一种方式，指定版本号进行安装：npm install webpack@版本号 webpack-cli.
+
+
+  命令的一些简写:npm init -y;可以不用一路回车，直接生成默认的；
+  npm install webpack webpack-cli -D,替代npm install webpack webpack-cli --save-dev
